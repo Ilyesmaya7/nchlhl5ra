@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MapReduce Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gray-100 p-6">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold mb-6">MapReduce Dashboard</h1>
+        
+        <div class="mb-6">
+            <h2 class="text-xl font-semibold mb-2">Job Progress</h2>
+            <canvas id="progressChart" class="w-full h-16"></canvas>
+        </div>
+        
+        <div class="mb-6">
+            <h2 class="text-xl font-semibold mb-2">Tasks</h2>
+            <table class="w-full bg-white shadow rounded">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="p-2 text-left">ID</th>
+                        <th class="p-2 text-left">Type</th>
+                        <th class="p-2 text-left">Status</th>
+                    </tr>
+                </thead>
+                <tbody id="tasksTable"></tbody>
+            </table>
+        </div>
+        
+        <div>
+            <h2 class="text-xl font-semibold mb-2">Workers</h2>
+            <table class="w-full bg-white shadow rounded">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="p-2 text-left">ID</th>
+                        <th class="p-2 text-left">Tasks Assigned</th>
+                    </tr>
+                </thead>
+                <tbody id="workersTable"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="/script.js"></script>
+</body>
+</html>
